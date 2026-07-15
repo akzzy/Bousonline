@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bous — Watch Helper & Privacy Policy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-glow"></div>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">B</div>
+        <span class="brand-text">Bous</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">Overview</a>
+        <a href="#permissions">Permissions</a>
+        <a href="#data-storage">Data Privacy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="badge">Chrome Web Store Policy Compliance</div>
+      <h1>Privacy Policy & Extension Transparency</h1>
+      <p class="hero-subtitle">
+        Bous is designed from the ground up to respect your privacy. We collect zero personal information, transmit zero tracking telemetry, and process all catalog metadata and playlist exports directly inside your local browser.
+      </p>
+      <div class="meta-info">
+        <span><strong>Effective Date:</strong> July 15, 2026</span>
+        <span class="dot">•</span>
+        <span><strong>Extension Version:</strong> 1.0.0</span>
+      </div>
+    </section>
+
+    <section id="about" class="policy-card">
+      <h2>1. Overview & Core Purpose</h2>
+      <p>
+        <strong>Bous</strong> is an entertainment catalog and metadata discovery companion for web browsers. It overlays rich movie and series details, multi-source ratings (IMDb, Rotten Tomatoes, Metacritic, Trakt), cast/crew info, and episode guides onto your favorite entertainment sites. Additionally, Bous enables users to export their curated catalog selections into standard playlist files (XSPF) for direct playback in their preferred local media players such as VLC Media Player.
+      </p>
+    </section>
+
+    <section id="permissions" class="policy-card">
+      <h2>2. Detailed Permissions Justification</h2>
+      <p>To provide a seamless discovery and export experience without compromising your security, Bous requests only the exact browser permissions required by its functionality:</p>
+
+      <div class="permission-grid">
+        <div class="permission-item">
+          <div class="permission-header">
+            <code class="perm-tag">downloads</code>
+            <code class="perm-tag">downloads.open</code>
+            <code class="perm-tag">downloads.ui</code>
+          </div>
+          <div class="permission-desc">
+            <strong>Playlist Export & Media Player Launching:</strong> When you choose to play or export a title, Bous generates a standard XML Shareable Playlist Format (<code>.xspf</code>) file locally in memory and saves it to your downloads. The <code>downloads.open</code> permission allows Bous to automatically hand this playlist file off to your system's default media player (e.g., VLC Media Player) without requiring manual double-clicking. The <code>downloads.ui</code> permission is used to suppress unnecessary download shelf notifications during this transient export process so your browsing experience remains smooth and uninterrupted.
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <code class="perm-tag">storage</code>
+          </div>
+          <div class="permission-desc">
+            <strong>Local Settings & Addon Configuration:</strong> Used exclusively via <code>chrome.storage.local</code> to save your UI preferences, theme customizations, and user-provided catalog/addon endpoints directly on your local device.
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <code class="perm-tag">activeTab</code>
+            <code class="perm-tag">scripting</code>
+          </div>
+          <div class="permission-desc">
+            <strong>On-Demand Sidebar Injection:</strong> Grants Bous permission to inject the catalog discovery sidebar and overlay stylesheet onto the active webpage only when triggered by clicking the extension icon or interactive page button.
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <code class="perm-tag">host_permissions &lt;all_urls&gt;</code>
+          </div>
+          <div class="permission-desc">
+            <strong>Universal Catalog Discovery & Dynamic APIs:</strong> Required so users can launch the Bous discovery dashboard from any website, and so the extension can securely fetch metadata, episode summaries, and thumbnails from public metadata providers (e.g., Cinemeta, TMDB, TVMaze) and user-configured external endpoints without encountering cross-origin (CORS) browser restrictions.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="data-storage" class="policy-card">
+      <h2>3. Data Storage & No Tracking Guarantee</h2>
+      <ul class="check-list">
+        <li><strong>No Personal Data Collected:</strong> Bous does not collect, store, share, or sell any personally identifiable information (PII), browsing history, search queries, or analytics.</li>
+        <li><strong>100% Local Processing:</strong> All preferences, cached metadata, and custom endpoints reside exclusively in your browser's local sandbox (<code>chrome.storage.local</code>).</li>
+        <li><strong>No Third-Party Servers:</strong> Bous does not operate any proprietary backend servers. All network requests are made directly from your browser to the respective public metadata APIs or your designated catalog services.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="policy-card">
+      <h2>4. Contact Us & Support</h2>
+      <p>
+        If you have questions about this Privacy Policy, extension permissions, or data practices, please reach out directly:
+      </p>
+      <div class="contact-box">
+        <p><strong>Website:</strong> <a href="https://bous.online">https://bous.online</a></p>
+        <p><strong>Email Support:</strong> <a href="mailto:support@bous.online">support@bous.online</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Bous. All rights reserved. Built with privacy and design excellence.</p>
+    </div>
+  </footer>
+</body>
+</html>
