@@ -3,121 +3,230 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bous — Watch Helper & Privacy Policy</title>
+  <title>Bous — Discover & Watch Your Catalog, Anywhere</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="background-glow"></div>
-
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="brand">
+  <!-- Top Navigation Pill -->
+  <header class="navbar-wrapper">
+    <div class="navbar-pill">
+      <a href="index.html" class="brand">
         <div class="brand-icon">B</div>
         <span class="brand-text">Bous</span>
-      </div>
+      </a>
       <nav class="nav-links">
-        <a href="#about">Overview</a>
-        <a href="#permissions">Permissions</a>
-        <a href="#data-storage">Data Privacy</a>
-        <a href="#contact">Contact</a>
+        <a href="#hero" class="active-nav">Home</a>
+        <a href="#features">Features</a>
+        <a href="#showcase">Experience</a>
+        <a href="#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
       </nav>
+      <div class="nav-actions">
+        <a href="https://chromewebstore.google.com/detail/bous/jbgjcaapccfomacgbhkkpjhhkhjfibgg" target="_blank" class="btn btn-primary btn-nav">
+          <svg class="chrome-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 19.5a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zm0-11.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5z"/>
+          </svg>
+          Add to Chrome
+        </a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="badge">Chrome Web Store Policy Compliance</div>
-      <h1>Privacy Policy & Extension Transparency</h1>
-      <p class="hero-subtitle">
-        Bous is designed from the ground up to respect your privacy. We collect zero personal information, transmit zero tracking telemetry, and process all catalog metadata and playlist exports directly inside your local browser.
-      </p>
-      <div class="meta-info">
-        <span><strong>Effective Date:</strong> July 15, 2026</span>
-        <span class="dot">•</span>
-        <span><strong>Extension Version:</strong> 1.0.0</span>
-      </div>
-    </section>
-
-    <section id="about" class="policy-card">
-      <h2>1. Overview & Core Purpose</h2>
-      <p>
-        <strong>Bous</strong> is an entertainment catalog and metadata discovery companion for web browsers. It overlays rich movie and series details, multi-source ratings (IMDb, Rotten Tomatoes, Metacritic, Trakt), cast/crew info, and episode guides onto your favorite entertainment sites. Additionally, Bous enables users to export their curated catalog selections into standard playlist files (XSPF) for direct playback in their preferred local media players such as VLC Media Player.
-      </p>
-    </section>
-
-    <section id="permissions" class="policy-card">
-      <h2>2. Detailed Permissions Justification</h2>
-      <p>To provide a seamless discovery and export experience without compromising your security, Bous requests only the exact browser permissions required by its functionality:</p>
-
-      <div class="permission-grid">
-        <div class="permission-item">
-          <div class="permission-header">
-            <code class="perm-tag">downloads</code>
-            <code class="perm-tag">downloads.open</code>
-            <code class="perm-tag">downloads.ui</code>
+  <main class="main-wrapper">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-left">
+          <div class="badge">Extension • v1.0.0 Live</div>
+          <h1 class="hero-title">Watch your catalog, anywhere</h1>
+          <p class="hero-subtitle">
+            Bring rich movie and series metadata, multi-source ratings, full cast profiles, and one-click playlist playback with you across every webpage.
+          </p>
+          <div class="hero-cta-group">
+            <a href="https://chromewebstore.google.com/detail/bous/jbgjcaapccfomacgbhkkpjhhkhjfibgg" target="_blank" class="btn btn-primary btn-hero">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+              Add to Chrome — It's Free
+            </a>
+            <a href="privacy.html" class="btn btn-secondary btn-hero">
+              Privacy Policy
+            </a>
           </div>
-          <div class="permission-desc">
-            <strong>Playlist Export & Media Player Launching:</strong> When you choose to play or export a title, Bous generates a standard XML Shareable Playlist Format (<code>.xspf</code>) file locally in memory and saves it to your downloads. The <code>downloads.open</code> permission allows Bous to automatically hand this playlist file off to your system's default media player (e.g., VLC Media Player) without requiring manual double-clicking. The <code>downloads.ui</code> permission is used to suppress unnecessary download shelf notifications during this transient export process so your browsing experience remains smooth and uninterrupted.
+          <div class="hero-trust">
+            <span class="trust-item">✓ Zero Data Tracking</span>
+            <span class="trust-item">✓ 100% Local Storage</span>
+            <span class="trust-item">✓ VLC & Player Ready</span>
           </div>
         </div>
 
-        <div class="permission-item">
-          <div class="permission-header">
-            <code class="perm-tag">storage</code>
-          </div>
-          <div class="permission-desc">
-            <strong>Local Settings & Addon Configuration:</strong> Used exclusively via <code>chrome.storage.local</code> to save your UI preferences, theme customizations, and user-provided catalog/addon endpoints directly on your local device.
-          </div>
-        </div>
-
-        <div class="permission-item">
-          <div class="permission-header">
-            <code class="perm-tag">activeTab</code>
-            <code class="perm-tag">scripting</code>
-          </div>
-          <div class="permission-desc">
-            <strong>On-Demand Sidebar Injection:</strong> Grants Bous permission to inject the catalog discovery sidebar and overlay stylesheet onto the active webpage only when triggered by clicking the extension icon or interactive page button.
-          </div>
-        </div>
-
-        <div class="permission-item">
-          <div class="permission-header">
-            <code class="perm-tag">host_permissions &lt;all_urls&gt;</code>
-          </div>
-          <div class="permission-desc">
-            <strong>Universal Catalog Discovery & Dynamic APIs:</strong> Required so users can launch the Bous discovery dashboard from any website, and so the extension can securely fetch metadata, episode summaries, and thumbnails from public metadata providers (e.g., Cinemeta, TMDB, TVMaze) and user-configured external endpoints without encountering cross-origin (CORS) browser restrictions.
+        <div class="hero-right">
+          <!-- Screenshot Card Box (User can place screenshot.png here) -->
+          <div class="screenshot-showcase-box">
+            <div class="window-bar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <div class="window-title">Bous Sidebar — Live Overlay</div>
+            </div>
+            <div class="screenshot-container">
+              <!-- Replace screenshot.png with your actual extension screenshot -->
+              <img src="screenshot.png" alt="Bous Extension Interface" class="app-screenshot" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1200&q=80';">
+              <div class="overlay-badge">
+                <div class="brand-icon xs">B</div>
+                <span>Bous Catalog Discovery</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="data-storage" class="policy-card">
-      <h2>3. Data Storage & No Tracking Guarantee</h2>
-      <ul class="check-list">
-        <li><strong>No Personal Data Collected:</strong> Bous does not collect, store, share, or sell any personally identifiable information (PII), browsing history, search queries, or analytics.</li>
-        <li><strong>100% Local Processing:</strong> All preferences, cached metadata, and custom endpoints reside exclusively in your browser's local sandbox (<code>chrome.storage.local</code>).</li>
-        <li><strong>No Third-Party Servers:</strong> Bous does not operate any proprietary backend servers. All network requests are made directly from your browser to the respective public metadata APIs or your designated catalog services.</li>
-      </ul>
+    <!-- 3-Column Feature Strip -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Your catalog follows you</h3>
+            <p>Access rich movie and series breakdowns right on your screen. Whether you're browsing entertainment portals or any webpage, Bous opens instantly via the toolbar.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Unified Multi-Ratings</h3>
+            <p>Never second-guess what to watch. View critic and audience ratings from top cinema and television databases unified into one clean, scannable rating strip.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/><line x1="19" y1="5" x2="19" y2="19"/></svg>
+            </div>
+            <h3>Direct Player Playback</h3>
+            <p>Export any selected title or stream directly as a standard XSPF playlist file. Bous automatically launches it inside your preferred local media player like VLC.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="policy-card">
-      <h2>4. Contact Us & Support</h2>
-      <p>
-        If you have questions about this Privacy Policy, extension permissions, or data practices, please reach out directly:
-      </p>
-      <div class="contact-box">
-        <p><strong>Website:</strong> <a href="https://bous.online">https://bous.online</a></p>
-        <p><strong>Email Support:</strong> <a href="mailto:support@bous.online">support@bous.online</a></p>
+    <!-- Deep Experience Showcase -->
+    <section id="showcase" class="showcase-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Built for true entertainment lovers</h2>
+          <p>Every detail designed with clean typography, dark-mode elegance, and zero visual clutter.</p>
+        </div>
+
+        <div class="showcase-row">
+          <div class="showcase-text">
+            <span class="showcase-tag">Episode Browser</span>
+            <h3>Navigate seasons & episodes seamlessly</h3>
+            <p>Jump directly between seasons and inspect full episode cards complete with runtime info, air dates, summaries, and individual episode ratings right inside the sidebar.</p>
+            <ul class="check-list">
+              <li>High-resolution episode thumbnails</li>
+              <li>Instant season switching tabs</li>
+              <li>Cast and crew profiles right below</li>
+            </ul>
+          </div>
+          <div class="showcase-visual">
+            <div class="mockup-card solid">
+              <div class="mockup-header">
+                <span>Season 1</span>
+                <span class="active">Season 2</span>
+                <span>Season 3</span>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-ep">
+                  <div class="ep-thumb"></div>
+                  <div class="ep-info">
+                    <strong>1. The Heirs of the Dragon</strong>
+                    <span>★ 7.6 • 1h 10m • Aug 2022</span>
+                  </div>
+                </div>
+                <div class="mockup-ep">
+                  <div class="ep-thumb"></div>
+                  <div class="ep-info">
+                    <strong>2. The Rogue Prince</strong>
+                    <span>★ 7.7 • 1h 0m • Aug 2022</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-row reverse">
+          <div class="showcase-text">
+            <span class="showcase-tag">Privacy First</span>
+            <h3>100% Local. Zero Tracking.</h3>
+            <p>Unlike other browser companions that collect browsing habits and telemetry, Bous is built to respect your digital footprint from day one.</p>
+            <ul class="check-list">
+              <li>No external tracking servers</li>
+              <li>All preferences stored in local sandbox</li>
+              <li>Transparent open-source architecture</li>
+            </ul>
+            <div style="margin-top: 24px;">
+              <a href="privacy.html" class="link-arrow">Read Full Privacy Policy →</a>
+            </div>
+          </div>
+          <div class="showcase-visual">
+            <div class="mockup-card solid privacy-mockup">
+              <div class="privacy-shield">🔒</div>
+              <h4>No Telemetry Transmitted</h4>
+              <p>Everything runs directly between your browser and public metadata endpoints.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4>Is Bous completely free to use?</h4>
+            <p>Yes! Bous is 100% free with no ads, no subscriptions, and no paywalled features.</p>
+          </div>
+          <div class="faq-item">
+            <h4>How does the VLC / external media player export work?</h4>
+            <p>When you select a stream or title, Bous creates a standard XSPF playlist file right in memory and hands it off to your browser's default media player using the <code>downloads.open</code> permission.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Does Bous collect my browsing history?</h4>
+            <p>Absolutely not. Bous operates locally inside your browser (`chrome.storage.local`) and only fetches metadata when you actively interact with the extension sidebar.</p>
+          </div>
+          <div class="faq-item">
+            <h4>How do I install the extension?</h4>
+            <p>Click the "Add to Chrome" button at the top of this page to visit the official Chrome Web Store listing, then click "Add to Chrome" to install it instantly.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer-content">
-      <p>&copy; 2026 Bous. All rights reserved. Built with privacy and design excellence.</p>
+      <div class="footer-brand">
+        <div class="brand-icon small">B</div>
+        <span>Bous</span>
+      </div>
+      <p>&copy; 2026 Bous. All rights reserved. Built with privacy and modern design excellence.</p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:support@bous.online">Support</a>
+      </div>
     </div>
   </footer>
 </body>
