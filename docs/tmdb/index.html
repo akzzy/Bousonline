@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bous — TMDB Integration Guide</title>
+  <link rel="stylesheet" href="../../style.css?v=2.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="brand">
+        <div class="brand-icon">B</div>
+        <span class="brand-text">Bous</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../../index.html#about">Overview</a>
+        <a href="../../index.html#permissions">Permissions</a>
+        <a href="../../index.html#data-storage">Data Privacy</a>
+        <a href="../../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero policy-hero">
+      <div class="badge">Integration Guide</div>
+      <img src="../../assets/tmdb-logo.svg" alt="TMDB Logo" style="height: 64px; width: auto; margin: 24px auto 16px; display: block; border-radius: 8px;">
+      <h1>Connecting TMDB to Bous</h1>
+      <p class="hero-subtitle">
+        Bous uses The Movie Database (TMDB) to provide rich metadata, cast information, and high-quality images. Follow this simple guide to get your free API key and unlock the full experience in less than two minutes.
+      </p>
+    </section>
+
+    <section class="policy-card">
+      <h2>Step-by-Step Guide</h2>
+      <div class="permission-grid">
+        
+        <div class="permission-item">
+          <div class="permission-header">
+            <code class="perm-tag">Step 1</code>
+            <strong>Sign up at TMDB</strong>
+          </div>
+          <div class="permission-desc">
+            Go to <a href="https://www.themoviedb.org/signup" target="_blank" style="text-decoration: underline;">themoviedb.org</a> and complete the standard signup. Verify your email address. It only takes a couple of minutes!
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <code class="perm-tag">Step 2</code>
+            <strong>Request an API Key</strong>
+          </div>
+          <div class="permission-desc">
+            Once logged in, click your profile icon, go to <strong>Settings</strong> &rarr; <strong>API</strong> &rarr; <strong>Request an API Key</strong>. Click on the <strong>Developer</strong> plan. It is completely free forever.
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <code class="perm-tag">Step 3</code>
+            <strong>Fill the Application Form</strong>
+          </div>
+          <div class="permission-desc">
+            <p>This is where some people get stuck. Here is exactly what to put in the tricky fields:</p>
+            <ul style="margin-top: 10px; line-height: 1.6; padding-left: 20px;">
+              <li><strong>Application Name:</strong> You can put whatever you plan to call your personal setup (e.g., "My Bous Setup"). It does not need to be final.</li>
+              <li><strong>Application URL:</strong> If you don't have a live project, you can use your GitHub profile URL, an empty repository, or simply <code>https://localhost</code>. TMDB accepts all of these for developer accounts.</li>
+              <li><strong>Type of Use:</strong> Choose "Mobile Application", "Website", or whatever fits your use case best.</li>
+              <li><strong>Application Summary:</strong> Be honest and upfront. We recommend something like: <br><em>"A personal learning project — a movie discovery dashboard for educational and portfolio purposes only."</em><br> The phrase “educational and portfolio purposes only” helps ensure instant approval!</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <code class="perm-tag">Step 4</code>
+            <strong>Copy your API Key</strong>
+          </div>
+          <div class="permission-desc">
+            After submitting the form, you will be given your API keys. Look for the token labeled <strong>API Key (v3 auth)</strong> and copy it to your clipboard.
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <code class="perm-tag">Step 5</code>
+            <strong>Paste into Bous</strong>
+          </div>
+          <div class="permission-desc">
+            Open the Bous extension in your browser, open the settings panel (gear icon), and paste your API Key into the TMDB API Key field. You're all set!
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-icon small">B</div>
+        <span>Bous</span>
+      </div>
+      <p>&copy; 2026 Bous. All rights reserved. Built with privacy and modern design excellence.</p>
+      <div class="footer-links">
+        <a href="../../index.html#about">Overview</a>
+        <a href="../../index.html#permissions">Permissions</a>
+        <a href="mailto:support@bous.online">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

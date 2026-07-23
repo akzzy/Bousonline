@@ -206,7 +206,11 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.hero-left {
+  margin-top: 24px;
 }
 
 .badge {
