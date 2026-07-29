@@ -1,0 +1,12 @@
+{
+  "addons": [
+    {
+      "name": "Better Poster",
+      "url": "https://btttr.cc/RYwxDsIwEAT_srX5gD-AKGiADlGcksNEcuxwPgtFUf6O7MTQzc3u3oKOlHx0CfYOT8pJDyNMwwQDjT3NVW70d1RIOPRDcFuhHaUzxSl7kho03rYTHgYjK8EuawmTssAuNbKgrLFsJDrhlGBVMu_Pb-R-4p3JDzpv6kk-sUF6xc-Rg3ArFXEhHYJrhhw3sY-knteYpWNYnM5Y1y8/manifest.json"
+    },
+    {
+      "name": "Cinemeta",
+      "url": "https://v3-cinemeta.strem.io/manifest.json"
+    }    
+  ]
+}
